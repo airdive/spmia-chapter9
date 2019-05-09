@@ -15,13 +15,13 @@ import org.springframework.context.annotation.Bean;
 @EnableEurekaClient
 @EnableCircuitBreaker
 @EnableBinding(Source.class)
-public class Application {
+public class OrganizationApplication {
 
     @Bean
     public Sampler defaultSampler() {
         return new AlwaysSampler();
     }
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(OrganizationApplication.class, args);
     }
 }

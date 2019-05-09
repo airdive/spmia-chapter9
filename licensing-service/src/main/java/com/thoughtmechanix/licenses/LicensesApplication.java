@@ -22,12 +22,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableCircuitBreaker
 @EnableBinding(Sink.class)
-public class Application {
+public class LicensesApplication {
 
     @Autowired
     private ServiceConfig serviceConfig;
 
-    private static final Logger logger = LoggerFactory.getLogger(Application.class);
+    private static final Logger logger = LoggerFactory.getLogger(LicensesApplication.class);
 
     @LoadBalanced
     @Bean
@@ -63,6 +63,6 @@ public class Application {
 //    }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(LicensesApplication.class, args);
     }
 }
