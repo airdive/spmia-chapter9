@@ -20,9 +20,9 @@ spring:
       server:
         encrypt.enabled: false
         git:
-          uri: https://github.com/liuisdocker/config-repo/
+          uri: https://github.com/liuisstack/config-repo/
           searchPaths: licensingservice,organizationservice,specialroutesservice,zuulservice
-          username: liuisdocker
+          username: liuisstack
           password: 9980aaAA
 
 

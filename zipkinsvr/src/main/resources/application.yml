@@ -9,3 +9,23 @@ logging:
     com.netflix: WARN
     org.springframework.web: WARN
     com.thoughtmechanix: DEBUG
+
+spring:
+  datasource:
+    schema: classpath:/mysql.sql
+    name: zipkin
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://${MYSQL_HOST:192.168.5.43}:3306/zipkin
+    username: root
+    password: root
+    # Switch this on to create the schema on startup:
+    initialize: true
+    continueOnError: true
+  sleuth:
+    sampler:
+      percentage: 1.0
+    enabled: false
+zipkin:
+  storage:
+    type: mysql
+
